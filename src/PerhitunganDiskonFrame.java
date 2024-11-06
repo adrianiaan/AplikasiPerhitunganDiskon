@@ -127,6 +127,11 @@ public class PerhitunganDiskonFrame extends javax.swing.JFrame {
         jPanel1.add(lblPersentase, gridBagConstraints);
 
         txtHargaAsli.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        txtHargaAsli.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtHargaAsliKeyTyped(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -213,7 +218,7 @@ public class PerhitunganDiskonFrame extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         jPanel1.add(btnHitung, gridBagConstraints);
 
-        jPanel2.setLayout(new java.awt.GridLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
         txtRiwayat.setEditable(false);
         txtRiwayat.setColumns(20);
@@ -312,6 +317,12 @@ public class PerhitunganDiskonFrame extends javax.swing.JFrame {
         int sliderValue = sldDiskon.getValue();
         lblPersentase.setText(sliderValue + "%");
     }//GEN-LAST:event_sldDiskonStateChanged
+
+    private void txtHargaAsliKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHargaAsliKeyTyped
+        if (!txtHargaAsli.getText().startsWith("Rp ")) {
+            txtHargaAsli.setText("Rp ");
+        }
+    }//GEN-LAST:event_txtHargaAsliKeyTyped
 
     /**
      * @param args the command line arguments
