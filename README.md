@@ -1,5 +1,5 @@
 # Aplikasi Perhitungan Diskon  
-Tugas 3 - [Nama Anda] ([NPM Anda])
+Tugas 3 - Adrian Akhmad Firdaus (2210010491)
 
 ---
 
