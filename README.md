@@ -1,5 +1,3 @@
----
-
 # Aplikasi Perhitungan Diskon  
 Tugas 3 - [Nama Anda] ([NPM Anda])
 
